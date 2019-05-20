@@ -1,0 +1,24 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol Ld_OSR has not been declared in module z380." "c:/My_Designs/coursework/Z380/src/z380.v" 387 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol CE_BitCnt has not been declared in module z380." "c:/My_Designs/coursework/Z380/src/z380.v" 421 1
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol Rst_BitCnt has not been declared in module z380." "c:/My_Designs/coursework/Z380/src/z380.v" 422 1
+UPDATEPROGRESS 17
+UPDATEPROGRESS 35
+MESSAGE "Pass 2. Processing instantiations."
+MESSAGE_SP VCP2876 "Implicit net declaration, symbol SS has not been declared in module tb_z380." "c:/My_Designs/coursework/Z380/src/testbench/tb_z380.v" 110 1
+UPDATEPROGRESS 45
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 56
+UPDATEPROGRESS 68
+UPDATEPROGRESS 80
+MESSAGE "ELB/DAG code generating."
+MESSAGE "Module \$root found in current working library."
+UPDATEPROGRESS 86
+UPDATEPROGRESS 93
+UPDATEPROGRESS 100
+MESSAGE "Unit top modules: tb_z380."
+MESSAGE "$root top modules: tb_z380."
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time: 1[s]."

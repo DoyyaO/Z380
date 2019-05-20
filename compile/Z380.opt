@@ -1,0 +1,1 @@
+ -u "C:\Program Files (x86)\Aldec\Active-HDL 7.3\bin/systf.dll" -v20  "c:\My_Designs\coursework\Z380\src\z380.v" -v20  "c:\My_Designs\coursework\Z380\src\testbench\tb_z380.v"  -cs  -g 5  -l "c:\My_Designs\coursework\Z380\compile\Z380.erf" -r -li "c:\My_Designs\coursework\Z380\compile\Z380.epr" -p "c:\My_Designs\coursework\Z380" 

@@ -1,0 +1,143 @@
+# DESIGN: Default Design Language: VERILOG
+# DESIGN: Default BDE Language: VERILOG
+# DESIGN: C-Synthesis: Not Defined
+# DESIGN: HDL Synthesis: Not Defined
+# DESIGN: Physical Synthesis: Not Defined
+# DESIGN: Implementation: Not Defined
+alog  -work Z380 $DSN/src/z380.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# VCP2876 z380.v : (387, 1): Implicit net declaration, symbol Ld_OSR has not been declared in module z380.
+# VCP2876 z380.v : (421, 1): Implicit net declaration, symbol CE_BitCnt has not been declared in module z380.
+# VCP2876 z380.v : (422, 1): Implicit net declaration, symbol Rst_BitCnt has not been declared in module z380.
+# Pass 2. Processing instantiations.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Unit top modules: z380.
+# $root top modules: z380.
+# Compile success 0 Errors 0 Warnings  Analysis time: 0[s].
+# done
+alog  -work Z380 $DSN/src/z380.v $DSN/src/testbench/tb_z380.v
+# Compile...
+# Pass 1. Scanning modules hierarchy.
+# Module \$root found in current working library.
+# VCP2876 z380.v : (387, 1): Implicit net declaration, symbol Ld_OSR has not been declared in module z380.
+# VCP2876 z380.v : (421, 1): Implicit net declaration, symbol CE_BitCnt has not been declared in module z380.
+# VCP2876 z380.v : (422, 1): Implicit net declaration, symbol Rst_BitCnt has not been declared in module z380.
+# Pass 2. Processing instantiations.
+# VCP2876 tb_z380.v : (110, 1): Implicit net declaration, symbol SS has not been declared in module tb_z380.
+# Pass 3. Processing behavioral statements.
+# ELB/DAG code generating.
+# Module \$root found in current working library.
+# Unit top modules: tb_z380.
+# $root top modules: tb_z380.
+# Compile success 0 Errors 0 Warnings  Analysis time: 1[s].
+# done
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+asim -advdataflow  tb_z380
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 1677 kB (elbread=1023 elab2=378 kernel=275 sdf=0)
+# KERNEL: ASDB file was created in location c:\My_Designs\coursework\Z380\src\wave.asdb
+#  11:47, 20 мая 2019 г.
+#  Simulation has been initialized
+#  Selected Top-Level: tb_z380 (tb_z380)
+# 16 signal(s) traced.
+run
+# KERNEL: Testing: MSB first, all four SPI modes, fastest SPI SCK rate
+# KERNEL: 
+# KERNEL: 	Test - Mode 0
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled low in Mode 0
+# KERNEL: 
+# KERNEL: 		Pass: SCK started low in Mode 0
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled low in Mode 0
+# KERNEL: 
+# KERNEL: 		Pass: RD equal to TD
+# KERNEL: 
+# KERNEL: 		Pass: SS Length == 16; SCK rate correct
+# KERNEL: 
+# KERNEL: 	Test - Mode 1
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled high in Mode 1
+# KERNEL: 
+# KERNEL: 		Pass: SCK started high in Mode 1
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled high in Mode 1
+# KERNEL: 
+# KERNEL: 		Pass: RD equal to TD
+# KERNEL: 
+# KERNEL: 		Pass: SS Length == 16; SCK rate correct
+# KERNEL: 
+# KERNEL: 	Test - Mode 2
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled low in Mode 2
+# KERNEL: 
+# KERNEL: 		Pass: SCK started high in Mode 2
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled low in Mode 2
+# KERNEL: 
+# KERNEL: 		Pass: RD equal to TD
+# KERNEL: 
+# KERNEL: 		Pass: SS Length == 16; SCK rate correct
+# KERNEL: 
+# KERNEL: 	Test - Mode 3
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled high in Mode 3
+# KERNEL: 
+# KERNEL: 		Pass: SCK started low in Mode 3
+# KERNEL: 
+# KERNEL: 		Pass: SCK idled high in Mode 3
+# KERNEL: 
+# KERNEL: 		Pass: RD equal to TD
+# KERNEL: 
+# KERNEL: 		Pass: SS Length == 16; SCK rate correct
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer
+# KERNEL: 
+# KERNEL: 	Pass: SS Length == 64; Correct number of transfers
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 1)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==         128
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 2)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==         256
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 3)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==         512
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 4)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==        1024
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 5)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==        2048
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 6)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==        4096
+# KERNEL: 
+# KERNEL: Testing multi-cycle transfer with (Rate == 7)
+# KERNEL: 
+# KERNEL: 	Pass: SS Length ==        8192
+# KERNEL: 
+# RUNTIME: RUNTIME_0070 tb_z380.v (514): $stop called.
+# KERNEL: Time: 164666 ns,  Iteration: 0,  TOP instance,  Process: #INITIAL#116_0.
+# KERNEL: stopped at delta: 0 at time 164666 ns.
+#  Simulation has been stopped

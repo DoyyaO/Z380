@@ -1,0 +1,7 @@
+42
+~M 3 "./src/testbench/tb_z380.v" 68 tb_z380
+~A 1 "./src/testbench/tb_z380.v" 68 tb_z380
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 1 "./src/z380.v" 233 z380
+~A 1 "./src/z380.v" 233 z380
